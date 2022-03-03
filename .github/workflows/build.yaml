@@ -25,7 +25,7 @@ jobs:
           flutter-version: '2.11.0'
       - run: |
           flutter pub get
-          flutter build web
+          flutter build --base-href /rice-timer web
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
