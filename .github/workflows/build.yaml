@@ -35,6 +35,13 @@ jobs:
   build-ios:
     runs-on: macos-latest
     steps:
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: latest-stable
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'master'
+          flutter-version: '2.11.0'
+      - run: |
+          flutter doctor
+
